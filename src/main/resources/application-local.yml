@@ -2,7 +2,7 @@
 ### local
 ##############
 server:
-  port: 8080
+  port: 8082
 spring:
   h2:
     # h2 DB
@@ -56,3 +56,9 @@ springdoc:
 logging:
   level:
     com.kt.edu: trace
+    org:
+      springframework:
+        r2dbc:
+          core:
+            DefaultDatabaseClient: debug
+        security: DEBUG

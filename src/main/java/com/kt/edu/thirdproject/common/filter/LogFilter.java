@@ -16,6 +16,7 @@ public class LogFilter implements WebFilter {
         long startTime = System.currentTimeMillis();
         String path = exchange.getRequest().getURI().getPath();
 
+        log.info("########### filter ###########");
         log.info("Serving '{}'", path);
 
         return chain.filter(exchange).doAfterTerminate(() -> {
